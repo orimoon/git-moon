@@ -98,8 +98,7 @@ header {
 //home
 .section-1 {
   .sec1-txt {
-    h1 {
-    }
+    display: flex;
   }
   $url: "http://unsplash.imgix.net/reserve/de9uL9L7RSmzV4SAoAO5_Lauren%20and%20Winona%20Under%20a%20pass-1.jpg?fit=crop&fm=jpg&h=1500&q=75&w=2400";
   $url2: "https://unsplash.imgix.net/reserve/PPE2xapKRNyy2DlTt89F_Gutman_island.jpg?fit=crop&fm=jpg&h=1500&q=75&w=2400";
@@ -107,7 +106,7 @@ header {
   .info-page {
     margin: 0 auto;
     white-space: nowrap;
-    width: 20%;
+    width: 30%;
     height: 60vh;
     position: absolute;
     top: 0;
