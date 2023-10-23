@@ -6,7 +6,6 @@
 body {
   background: #f7f5ef;
   font-family: sans-serif;
-  font-weight: 500;
 }
 
 header {
@@ -92,8 +91,40 @@ header .menu__box li a {
   background: #282828;
 }
 
+.section-1 {
+  position: relative;
+}
 .section-1 .sec1-txt {
   display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-1 .sec1-txt > div {
+  width: 30%;
+  position: relative;
+}
+.section-1 .sec1-txt .sl-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.section-1 .sec1-txt .slogan {
+  z-index: 10;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 477px;
+  font-size: 48px;
+  letter-spacing: -8px;
+}
+.section-1 .sec1-txt .slogan h2 {
+  font-family: "Elice Digital Baeum", sans-serif;
+  font-weight: 300;
+}
+.section-1 .sec1-txt .slogan h2 span {
+  font-weight: 600;
 }
 .section-1 .info-page {
   margin: 0 auto;
@@ -115,7 +146,7 @@ header .menu__box li a {
   position: relative;
 }
 .section-1 .i {
-  width: 40px;
+  width: 15px;
   height: 100%;
   display: inline-block;
   position: relative;
