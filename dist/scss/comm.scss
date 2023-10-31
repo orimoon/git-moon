@@ -7,6 +7,10 @@
 body {
   background: #f7f5ef;
   font-family: sans-serif;
+  strong {
+    font-size: 0.8em;
+    display: flex;
+  }
 }
 // header
 header {
@@ -91,7 +95,7 @@ header {
 //사이드내비
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-  background: #282828;
+  background: #795548;
 }
 
 //home
@@ -111,6 +115,19 @@ header {
       flex-direction: column;
       justify-content: flex-end;
     }
+    .ex-sk {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .skill-img {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      img {
+        width: 30px;
+      }
+    }
     .slogan {
       z-index: 10;
       position: absolute;
@@ -123,6 +140,7 @@ header {
       h2 {
         font-family: "Elice Digital Baeum", sans-serif;
         font-weight: 300;
+        margin: 0;
 
         span {
           font-weight: 600;
@@ -130,8 +148,6 @@ header {
       }
     }
   }
-  $url: "http://unsplash.imgix.net/reserve/de9uL9L7RSmzV4SAoAO5_Lauren%20and%20Winona%20Under%20a%20pass-1.jpg?fit=crop&fm=jpg&h=1500&q=75&w=2400";
-  $url2: "https://unsplash.imgix.net/reserve/PPE2xapKRNyy2DlTt89F_Gutman_island.jpg?fit=crop&fm=jpg&h=1500&q=75&w=2400";
 
   .info-page {
     margin: 0 auto;
@@ -144,7 +160,7 @@ header {
     right: 0;
     bottom: 0;
     overflow: hidden;
-    background: url($url2) repeat fixed;
+    background: url(../img/main-img.jpeg) repeat fixed;
     background-position: 50% 100%;
     background-size: cover;
     position: relative;
@@ -184,122 +200,6 @@ header {
   }
 }
 
-//about
-.section-2 {
-  .profile-wrap {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
-
-    .aboutme {
-      width: 100%;
-      .profile-depth1 {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-left: 0;
-        color: #000000;
-        h4 {
-          margin: 0 0 20px;
-        }
-        .profile-depth2 {
-          padding: 0;
-          li {
-            margin-bottom: 12px;
-            &:last-child {
-              margin-bottom: 0;
-            }
-            span {
-              margin-right: 10px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-//풀페이지 액티브효과
-// .section.active {
-//     .slide-wrap {
-//         &::before {
-//             transform: translateX(0);
-//         }
-//         .slide-cover {
-//             .mimesis {
-//                 transform: translateY(-55%);
-//             }
-//             .surffy {
-//                 transform: translateY(-72%);
-//             }
-//         }
-//     }
-//     // .profile-tit {
-//     //     @keyframes fade-in {
-//     //         to {
-//     //             opacity: 1;
-//     //         }
-//     //     }
-
-//     //     span {
-//     //         display: inline-block;
-//     //         overflow: hidden;
-//     //         position: relative;
-//     //         top: 0.8rem;
-//     //         animation: 0.3s swift-up ease-in-out forwards;
-//     //     }
-
-//     //     i {
-//     //         font-style: normal;
-//     //         position: relative;
-//     //         top: 2rem;
-//     //         animation: 0.5s swift-up ease-in-out forwards;
-//     //     }
-
-//     //     @keyframes swift-up {
-//     //         to {
-//     //             top: 0rem;
-//     //         }
-//     //     }
-
-//     //     span:nth-of-type(1) i {
-//     //         animation-delay: 0s;
-//     //     }
-
-//     //     span:nth-of-type(2) i {
-//     //         animation-delay: 0.1s;
-//     //     }
-
-//     //     span:nth-of-type(3) i {
-//     //         animation-delay: 0.2s;
-//     //     }
-
-//     //     span:nth-of-type(4) i {
-//     //         animation-delay: 0.3s;
-//     //     }
-
-//     //     span:nth-of-type(1) {
-//     //         animation-delay: 0s;
-//     //     }
-
-//     //     span:nth-of-type(2) {
-//     //         animation-delay: 0.1s;
-//     //     }
-
-//     //     span:nth-of-type(3) {
-//     //         animation-delay: 0.2s;
-//     //     }
-//     //     span:nth-of-type(3) {
-//     //         animation-delay: 0.3s;
-//     //     }
-//     //     span:nth-of-type(4) {
-//     //         animation-delay: 0.4s;
-//     //     }
-//     // }
-// }
-
 //포트폴리오 섹션 공통
 .slide-wrap {
   position: relative;
@@ -335,15 +235,24 @@ header {
     border-radius: 20px;
     overflow: hidden;
 
-    img {
+    .onepage {
       vertical-align: top;
       max-width: 100%;
       transition: all 3s;
       transition-delay: 0.5s;
-
-      &.surffy {
+      &:hover {
+        transform: translateY(-76%);
         transition: all 5s;
-        transition-delay: 0.5s;
+      }
+    }
+    .dongmoon {
+      vertical-align: top;
+      max-width: 100%;
+      transition: all 3s;
+      transition-delay: 0.5s;
+      &:hover {
+        transform: translateY(-66%);
+        transition: all 5s;
       }
     }
   }
@@ -355,16 +264,17 @@ header {
     height: 80%;
     color: #000000;
     .desc {
+      display: flex;
       padding: 0px;
-
+      ul {
+        padding: 0;
+      }
       li {
         margin-bottom: 0.625rem;
         line-height: 1.5;
         span {
-          &:nth-child(1) {
-            font-weight: 600;
-            padding-right: 20px;
-          }
+          font-weight: 600;
+          padding-right: 20px;
         }
       }
     }
@@ -372,7 +282,7 @@ header {
       a {
         padding: 8px 16px;
         border-radius: 5px;
-        color: #ffffff;
+        color: #795548;
         font-size: 0.875rem;
         font-weight: 700;
         border: 2px solid;
@@ -381,9 +291,9 @@ header {
         transition: 0.3s;
 
         &:hover {
-          background-color: #2a2a2a;
+          background-color: #795548;
           border-color: #000000;
-          color: #000000;
+          color: #ffffff;
         }
       }
     }
