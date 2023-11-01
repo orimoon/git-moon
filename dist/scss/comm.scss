@@ -255,6 +255,16 @@ header {
         transition: all 5s;
       }
     }
+    .zara {
+      vertical-align: top;
+      max-width: 100%;
+      transition: all 3s;
+      transition-delay: 0.5s;
+      &:hover {
+        transform: translateY(-76%);
+        transition: all 5s;
+      }
+    }
   }
   .slide-desc {
     display: flex;

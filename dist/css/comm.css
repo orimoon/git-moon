@@ -248,6 +248,16 @@ header .menu__box li a {
   transform: translateY(-66%);
   transition: all 5s;
 }
+.inner .slide-cover .zara {
+  vertical-align: top;
+  max-width: 100%;
+  transition: all 3s;
+  transition-delay: 0.5s;
+}
+.inner .slide-cover .zara:hover {
+  transform: translateY(-76%);
+  transition: all 5s;
+}
 .inner .slide-desc {
   display: flex;
   flex-direction: column;
